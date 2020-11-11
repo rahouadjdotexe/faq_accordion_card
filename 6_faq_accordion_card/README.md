@@ -20,8 +20,7 @@ Your users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Hide/Show the answer to a question when the question is clicked
-
+- Hide/Show the answer to a question when the question is click
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
 ## Where to find everything
