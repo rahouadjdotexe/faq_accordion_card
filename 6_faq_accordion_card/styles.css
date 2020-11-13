@@ -14,8 +14,6 @@ html{
 }
 
 body{
-    width: 100vw ;
-    height: 100% ;
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat ;
     font-family: 'Kumbh Sans', sans-serif ;
 }
@@ -32,57 +30,61 @@ body{
     
     background-color: white ;
     border-radius: 25px ;
-    box-shadow: 0px 4px 30px -4px black ;
+    box-shadow: 6px 6px 20px -10px black ;
 }
 
 
+
+
 /* IMAGES */
-#image_box{ 
-    position: absolute ;
-    right: 56% ;
+#mobile{
+    display: none ;
+}
+#desktop{ 
+    position: absolute ;    
     width: 44% ;
+    height: 100% ;
+}
+
+#desktop img, #mobile img{ 
+    position: absolute ;
+}
+
+
+.image_box{
+    overflow: hidden ;
+    position: absolute ;
+    width: 100% ;
     height: 100% ;
     
     border-top-left-radius: 25px ;
     border-bottom-left-radius: 25px ;
-    overflow: hidden ;
 }
-#image_box div, div#img_orange{ 
-    position: absolute ;
-    
-    background-size: contain ;
-    background-position: right ;
-    background-repeat: no-repeat ;
-}
-
-div#img_bg{
-    background-image: url("images/bg-pattern-desktop.svg") ;
-    left: -156% ;
-    top: -87% ;
+#desktop .img_bg{
+    right: 0px ;
+    top: -60% ;
     width: 256% ;
-    height: 250% ;
+    height: 189% ;
 }
-div#img_woman{
-    background-image: url("images/illustration-woman-online-desktop.svg") ;
-    left: -26% ;
+#desktop .img_woman{
+    right: 0px ;
     top: 13% ;
-    width: 126% ;
-    height: 71% ;
+    width: 123% ;
+    height: 71.5% ;
 }
-div#img_orange{
-    background-image: url("images/illustration-box-desktop.svg") ;
+#desktop .img_orange{
     transform: translateX(-48.5%) ;
-    width: 21% ;
-    height: 37% ;
+    width: 45% ;
+    height: 35% ;
     left: 0px ;
-    top: 37% ;
+    top: 40% ;
     
 }
 
 
 
 
-/* QUESTIONS REPONSES  border: 1px solid black ; */
+/* QUESTIONS REPONSES */
 #question_box{
     position: absolute ;
     left: 55% ;
@@ -111,8 +113,11 @@ h3{
     font-size: 15px ;
     font-weight: 400 ;
 }
-h3:active{
+h3.hover{
     color: hsl(14, 88%, 65%) ;
+}
+h3.clicked{
+    font-weight: 700 ;
 }
 
 #question_box img{
@@ -150,15 +155,16 @@ footer{
 
 
 /* REPONSIVE */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
+    
     #container{
         width: 85% ;
-        min-width: 0px ;
-        height: 75% ;
+        min-width: 335px ;
+        height: 70% ;
+        min-height: 500px ;
         top: 55% ;
         display: flex ;
         justify-content: center ;
-        align-items: flex-end ;
         
         border-radius: 20px ;
         box-shadow: 6px 6px 20px -10px black ;
@@ -169,48 +175,29 @@ footer{
     
     
     /* transform: translateX(-60.8%) ; */
-    #image_box{ border: 2px solid green ;
-        position: absolute ;
-        right: 56% ;
-        width: 44% ;
-        height: 100% ;
-
-        border-top-left-radius: 25px ;
-        border-bottom-left-radius: 25px ;
-        overflow: hidden ;
+    #desktop{
         display: none ;
     }
-    #image_box div, div#img_orange{ border: 1px solid black ;
+    
+    #mobile{
+        position: relative ;
         display: block ;
-        position: absolute ;
-
-        background-size: contain ;
-        background-position: right ;
-        background-repeat: no-repeat ;
-    }
-
-    div#img_bg{
-        background-image: url("images/bg-pattern-desktop.svg") ;
-        left: auto ;
-        top: auto ;
-        width: 100% ;
-        height: 100% ;
-    }
-    div#img_woman{
-        background-image: url("images/illustration-woman-online-desktop.svg") ;
-        left: auto ;
-        top: auto ;
-        width: 100% ;
-        height: 100% ;
-    }
-    div#img_orange{display: none ;
-        background-image: url("images/illustration-box-desktop.svg") ;
-        transform: translateX(-48.5%) ;
-        width: 21% ;
-        height: 37% ;
+        top: -20% ;
         left: 0px ;
-        top: 37% ;
-
+        width: 60% ;
+        height: 40% ;
+    }
+    .img_bg{
+        transform: translateX(-50%) ;
+        left: 50% ;
+        top: 53% ;
+        width: 100% ;
+    }
+    .img_woman{
+        transform: translate(-56.8%, -50%);
+        left: 50% ;
+        top: 50% ;
+        width: 100% ;
     }
     
     
@@ -221,12 +208,14 @@ footer{
     #question_box{
         width: inherit;
         left: auto ;
-        top: auto ;
-        margin-bottom: 50px ;
+        top: 25% ;
     }
     
     h1{
         text-align: center ;
+    }
+    h3.hover{
+        color: hsl(237, 12%, 33%) ;
     }
     
 }
